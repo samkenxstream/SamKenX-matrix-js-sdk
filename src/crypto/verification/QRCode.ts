@@ -153,7 +153,7 @@ export class QRCodeData {
         public readonly otherDeviceKey: string | undefined,
         // only set when mode is MODE_VERIFY_SELF_UNTRUSTED, own master key at time of generating QR code
         public readonly myMasterKey: string | undefined,
-        private readonly buffer: Buffer,
+        public readonly buffer: Buffer,
     ) {}
 
     public static async create(request: VerificationRequest, client: MatrixClient): Promise<QRCodeData> {
